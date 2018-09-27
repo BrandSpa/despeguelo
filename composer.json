@@ -1,0 +1,13 @@
+{
+    "name": "dev/rentadvisor_theme",
+    "authors": [
+        {
+            "name": "Alejandro Sanabria",
+            "email": "alesanabriav@gmail.com"
+        }
+    ],
+    "require": {
+        "wixel/gump": "1.5.2",
+        "mobiledetect/mobiledetectlib": "^2.8"
+    }
+}

@@ -1,0 +1,117 @@
+.posts-slider {
+  position: relative;
+  margin: 0 -10px;
+
+  &__container {
+    overflow: hidden;
+    padding: 40px 5px;
+  }
+
+  &__viewport {
+    position: relative;
+    transition: left .7s;
+    will-change: left;
+    z-index: 1;
+  }
+
+  &__btns {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+
+    a {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 30px;
+      height: 30px;
+      margin: auto;
+      font-size: 30px;
+      z-index: 2;
+    }
+
+    &__left {
+      left: -40px;
+
+      @media #{$s} {
+        left: 0;
+      }
+    }
+
+    &__right {
+      right: -40px;
+
+      @media #{$s} {
+        right: -10px;
+      }
+    }
+
+  }
+}
+
+.post-slide {
+  padding: 0 10px;
+
+  @media #{$s} {
+    padding: 0 40px;
+  }
+
+  &__media {
+    background-color: #F8F8F8;
+    background-position: center;
+    background-size: cover;
+    min-height: 250px;
+    cursor: pointer;
+  }
+
+  &__content {
+    background: #FFF;
+    border-radius: 20px;
+    padding: 40px;
+    float: left;
+    width: 100%;
+    box-shadow: 0 1px 1px 0 rgba(10, 16, 34, .2);
+    transition: all .7s;
+    min-height: 220px;
+    position: relative;
+
+    &:hover {
+      box-shadow: 0 10px 20px -5px rgba(10, 16, 34, .2);
+      transform: scale(1.02);
+    }
+  }
+
+  &__title {
+    color: #6031BA;
+    margin: 0 0 20px 0;
+    letter-spacing: normal;
+    line-height: 1.5;
+    font-family: 'Aktiv Grotesk';
+    font-size: 18px;
+  }
+
+  &__excerpt {
+    color: #747E86;
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    line-height: 1.4;
+    border-bottom: 1px solid #6031BA;
+    padding-bottom: 60px;
+  }
+
+  &__link {
+    display: block;
+    text-align: right;
+    color: #6031BA;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 20px;
+    border-top: 1px solid #6031BA;
+  }
+
+  .btn {
+    float: right;
+  }
+
+}

@@ -1,0 +1,215 @@
+@keyframes dash {
+  0%  {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    stroke: #fff;
+    stroke-width: 1;
+    fill: rgba(255,255,255,0);
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-width: 0;
+    fill: rgba(255,255,255,1);
+  }
+}
+
+
+.app-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: RGBA(96, 49, 186, 0);
+  padding: 20px 0 0 0;
+  z-index: 999;
+  transition: all .7s;
+
+  @media #{$s} {
+    padding: 10px 0;
+    height: 70px;
+  }
+
+  .logo {
+    @media #{$s} {
+      width: 50%;
+    }
+  }
+
+  .ra-menu-mobile {
+    float: right;
+  }
+
+  &__navicon {
+    float: right;
+    font-size: 40px;
+    color: #6032ba;
+    display: none;
+
+    @media #{$s} {
+      display: block;
+    }
+  }
+
+  &__nav {
+    position: fixed;
+    z-index: 99;
+    right: -100%;
+    top: 0;
+    width: 80%;
+    height: 100%;
+    background: #fff;
+    transition: right .3s ease-in-out;
+    box-shadow: -10px 0 10px rgba(0,0,0,.2);
+
+    &--show {
+      right: 0;
+    }
+
+    &__close {
+      position: absolute;
+      bottom: 40px;
+      left: -25px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+      background: #6031BA;
+      font-size: 25px;
+      color: #fff;
+    }
+
+    ul {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      overflow: auto;
+
+      li {
+        width: 100%;
+        a {
+          width: 100%;
+          display: block;
+          font-size: 16px;
+          padding: 15px 30px;
+          border-bottom: 1px solid #f7f7f7;
+        }
+      }
+    }
+  }
+
+  &--scrolling {
+    background: RGBA(96, 49, 186, 1);
+    color: #fff !important;
+    box-shadow: 0 0 5px rgba(0,0,0, .4);
+
+    .app-header__phone, .app-header__chat {
+      g {
+        fill: #fff;
+      }
+    }
+
+    .logo {
+
+      path {
+        animation: dash 2s cubic-bezier(0.42, 0, 1, 0.6);
+        fill: #fff;
+      }
+    }
+
+    .app-header__menu  {
+
+       li {
+         a {
+           color: #fff !important;
+         }
+       }
+    }
+    .app-header__navicon {
+        float: right;
+        font-size: 40px;
+        color: #fff;
+    }
+    .header__widget {
+      a {
+        color: #fff !important;
+      }
+    }
+
+  }
+
+  img {
+    float: left;
+  }
+
+  &__menu {
+    float: right;
+    margin: 0;
+    padding: 10px 0 0 0;
+
+    @media #{$s} {
+      display: none;
+    }
+
+    li {
+      display: inline-block;
+	    margin: 0 10px;
+      position: relative;
+
+      a {
+        color: #6031BA;
+        display: block;
+        font-family: 'Aktiv Grotesk';
+        display: block;
+        transition: all 500ms;
+      }
+    }
+  }
+
+  .current_page_item {
+    border-bottom: 2px solid #fff;
+  }
+
+  .header__widget {
+    float: right;
+
+    @media #{$s} {
+      display: none;
+    }
+  }
+
+  .sub-menu {
+    display: none;
+    position: absolute;
+    top: 30px;
+    min-width: 100px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,.01);
+    padding: 20px 40px;
+    border-radius: 10px 10px 40px 10px;
+
+    li {
+      display: block;
+      width: 100%;
+      margin: 0;
+
+      &:last-child {
+        a {
+          border: none;
+        }
+      }
+
+      a {
+        display: block;
+        color: #6031BA !important;
+        font-size: 12px;
+        padding: 4px;
+      }
+    }
+
+    &--open {
+      display: block;
+    }
+  }
+
+
+}

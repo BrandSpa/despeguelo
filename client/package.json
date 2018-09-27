@@ -1,0 +1,48 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "main": "app.js",
+  "author": "Alejandro Sanabria <alejandro@brandspa.com>",
+  "license": "MIT",
+  "scripts": {
+    "build:dev": "webpack --watch",
+    "build": "webpack --p",
+    "css:watch": "gulp",
+    "css": "gulp styles"
+  },
+  "dependencies": {
+    "animejs": "^2.0.2",
+    "axios": "^0.16.2",
+    "lazysizes": "^4.0.0-rc3",
+    "normalize.css": "^7.0.0",
+    "qs": "^6.4.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-multiple-render": "1.1.1",
+    "slick-carousel": "^1.6.0"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-sass": "^3.1.0",
+    "webpack": "^3.0.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ],
+    "plugins": [
+      "transform-object-rest-spread",
+      "transform-class-properties"
+    ]
+  }
+}

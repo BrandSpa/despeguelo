@@ -1,0 +1,58 @@
+.quo-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 998;
+  max-width: 1125px;
+  margin: 0 auto;
+  padding: 0 15px;
+  background: #fff;
+  width: 100%;
+  min-height: 80px;
+  border-radius: 100px 0 0 0;
+  padding: 20px 0 20px 0;
+  box-shadow: 0 10px 30px -5px rgba(10, 16, 34, 0.2);
+
+  @media #{$m} {
+    width: 100%;
+  }
+
+  @media #{$s} {
+    display: none;
+  }
+
+  &__container {
+    width: 100%;
+    padding: 0px 0px 0 50px;
+  }
+
+  &__errors {
+    color: #6031BA;
+  }
+
+  input, select {
+    border-color: #6031BA;
+    color: #6031BA;
+    margin-top: 10px;
+
+    &::-webkit-input-placeholder {
+      color: #6031BA;
+    }
+
+    &:-moz-placeholder {
+      /* Firefox 18- */
+      color: #6031BA;
+    }
+
+    &::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #6031BA;
+    }
+
+    &:-ms-input-placeholder {
+      color: #6031BA;
+    }
+  }
+
+}
