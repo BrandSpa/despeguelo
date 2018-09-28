@@ -54,6 +54,10 @@ if (window.addEventListener) {
 } else {
   window.onload = downloadJS;
 }
+$('input[name=presupuesto]').keyup(function(e){
+  var value = $(this).val();
+  $(this).val(value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."))
+})
 </script>
 <!--/async load app-->
 
